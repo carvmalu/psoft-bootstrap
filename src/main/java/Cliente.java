@@ -5,7 +5,8 @@ public class Cliente {
     private String cpf;
     private String nome;
     private String assinatura;
-
+    private static final double DESCONTO_STANDARD = 0.0;
+    private static final double DESCONTO_PREMIUM = 0.05;
     public Cliente(String nome, String cpf, String assinatura) {
         validarAssinatura(assinatura);
         this.nome = nome;
@@ -32,9 +33,9 @@ public class Cliente {
 
     public double getDescontoAssinatura() {
         if (assinatura.equalsIgnoreCase("premium")) {
-            return 0.05;
+            return DESCONTO_PREMIUM;
         }
-        return 0;
+        return DESCONTO_STANDARD;
     }
 
     private void validarAssinatura(String assinatura) {

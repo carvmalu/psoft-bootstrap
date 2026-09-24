@@ -4,6 +4,8 @@ public class ItemVenda {
 
     private Produto produto;
     private int quantidade;
+    private static final int QTD_DESCONTO = 20;
+    private static final double DESCONTO = 0.10;
 
     ItemVenda(Produto produto, int quantidade) {
         if (quantidade <= 0) {
@@ -23,8 +25,8 @@ public class ItemVenda {
 
     public double getSubTotal() {
         double subtotal = produto.getPreco() * quantidade;
-        if (quantidade >= 20) {
-            subtotal = subtotal - subtotal * 0.10;
+        if (quantidade >= QTD_DESCONTO) {
+            subtotal = subtotal - subtotal * DESCONTO;
         }
         return subtotal;
     }
