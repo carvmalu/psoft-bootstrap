@@ -18,7 +18,7 @@ public class Produto {
         return preco;
     }
 
-    public void setPreco(double novoPreco) {
-        this.preco = novoPreco;
+    public void setPreco(double novo) {
+        this.preco = novo;
     }
 }

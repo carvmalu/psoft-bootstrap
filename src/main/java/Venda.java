@@ -30,6 +30,7 @@ public class Venda {
         for (ItemVenda item : itens) {
             total += item.getSubTotal();
         }
-        return total - total * cliente.getDescontoAssinatura();
+        double totalVenda = total - total * cliente.getDescontoAssinatura();
+        return totalVenda;
     }
 }
