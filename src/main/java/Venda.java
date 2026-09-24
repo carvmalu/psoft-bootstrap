@@ -21,14 +21,14 @@ public class Venda {
         return itens;
     }
 
-    public void adicionarItem(Produto produto, int quantidade) {
+    public void adicionarItemVenda(Produto produto, int quantidade) {
         itens.add(new ItemVenda(produto, quantidade));
     }
 
-    public double calcularTotal() {
+    public double total() {
         double total = 0;
         for (ItemVenda item : itens) {
-            total += item.calcularSubtotal();
+            total += item.getSubTotal();
         }
         return total - total * cliente.getDescontoAssinatura();
     }

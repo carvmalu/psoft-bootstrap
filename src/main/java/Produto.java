@@ -3,22 +3,22 @@ package br.edu.ufcg.psoft.mercado;
 public class Produto {
 
     private String nome;
-    private double valor;
+    private double preco;
 
-    public Produto(String nome, double valor) {
+    public Produto(String nome, double preco) {
         this.nome = nome;
-        this.valor = valor;
+        this.preco = preco;
     }
 
     public String getNome() {
         return nome;
     }
 
-    public double getValor() {
-        return valor;
+    public double getPreco() {
+        return preco;
     }
 
-    public void setValor(double novoValor) {
-        this.valor = novoValor;
+    public void setPreco(double novoPreco) {
+        this.preco = novoPreco;
     }
 }

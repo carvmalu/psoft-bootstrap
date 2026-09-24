@@ -5,7 +5,7 @@ public class ItemVenda {
     private Produto produto;
     private int quantidade;
 
-    public ItemVenda(Produto produto, int quantidade) {
+    ItemVenda(Produto produto, int quantidade) {
         if (quantidade <= 0) {
             throw new IllegalArgumentException("Quantidade deve ser maior que zero.");
         }
@@ -21,8 +21,8 @@ public class ItemVenda {
         return quantidade;
     }
 
-    public double calcularSubtotal() {
-        double subtotal = produto.getValor() * quantidade;
+    public double getSubTotal() {
+        double subtotal = produto.getPreco() * quantidade;
         if (quantidade >= 20) {
             subtotal = subtotal - subtotal * 0.10;
         }
