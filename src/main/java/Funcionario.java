@@ -3,7 +3,6 @@ package psoft.atv2;
 import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 public class Funcionario {
 
@@ -38,7 +37,6 @@ public class Funcionario {
         funcoes.remove(funcao);
     }
 
-
     public void promover() {
         Funcao nova;
         if (possui(Desenvolvedor.class)) {
@@ -50,15 +48,5 @@ public class Funcionario {
         }
         funcoes.clear();
         funcoes.add(nova);
-    }
-
-    public void exercerFuncoes() {
-        System.out.println(this);
-        funcoes.forEach(Funcao::exercer);
-    }
-
-    @Override
-    public String toString() {
-        return nome + " [" + funcoes.stream().map(Funcao::getNome).collect(Collectors.joining(" + ")) + "]";
     }
 }
